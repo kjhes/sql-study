@@ -33,7 +33,7 @@ create table orders (
 	cus_id int not null,
     prod_id int not null,
 	order_id int auto_increment primary key,
-    order_quantity int not null constraint thk_order_quan check(order_quantity >=1 ),
+    order_quantity int not null **constraint** thk_order_quan check(order_quantity >=1 ),
     order_date datetime default current_timestamp not null,
     order_status varchar(20) not null default '주문접수',
     constraint fk_orders_customers foreign key (cus_id)
